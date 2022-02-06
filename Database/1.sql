@@ -7,7 +7,7 @@
 
 
 
-use sqlab;
+use sqldb;
 
 select * from usertbl;
 select * from buytbl;
@@ -16,7 +16,7 @@ select userid from buytbl group by userid;
 select userid, sum(amount) from buytbl group by userid;
 select userid, sum(amount) as total_amount from buytbl group by userid order by total_amount;
 
--- 평균 구매액
+-- 평균 구매량
 select userid, avg(amount) as '평균구매량' from buytbl group by userid order by avg(amount);
 
 -- 구매횟수
